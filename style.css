@@ -1,0 +1,357 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#header-image {
+  display: block;
+  margin: 0 auto;
+}
+
+#header-image-tablet {
+  display: none;
+}
+
+#header-div-desktop-child {
+  display: none;
+}
+
+#header-image-desktop {
+  display: none;
+}
+
+header {
+  display: block;
+  margin: 32px auto 120px auto;
+  width: 343px;
+  text-align: start;
+}
+
+header > h1 {
+  margin-bottom: 32px;
+}
+
+header > p {
+  margin-bottom: 32px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+#alink-div {
+  display: flex;
+  justify-content: space-between;
+  height: 72px;
+  width: 260px;
+  color: white;
+}
+
+a > #alink-div > div:nth-child(1) {
+  flex: 3;
+  background-color: #151515;
+  text-align: center;
+  line-height: 72px;
+}
+
+a > #alink-div > div:nth-child(2) {
+  flex: 1;
+  background-color: #d5966c;
+  text-align: center;
+  line-height: 72px;
+}
+
+.margin-auto-grid {
+  margin: 0 auto;
+  width: 344px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template: 320px 260px 480px 200px 293px / 343px;
+  grid-gap: 5px;
+}
+
+.grid-container > .first-text-grid > h1 {
+  margin-top: 25px;
+  margin-bottom: 21px;
+  line-height: 45px;
+  font-size: 50px;
+}
+
+.grid-container > .first-text-grid > p {
+  color: #444444;
+
+  margin-bottom: 32px;
+  line-height: 28px;
+  font-size: 18px;
+}
+
+.second-text-grid {
+  background-color: black;
+}
+
+.grid-container > .second-text-grid > h1 {
+  margin: 48px 0 0 24px;
+  line-height: 45px;
+  font-size: 50px;
+  color: white;
+}
+
+.grid-container > .second-text-grid > p {
+  color: white;
+  margin: 24px 24px 47px 24px;
+  line-height: 28px;
+  font-size: 18px;
+  width: 295px;
+}
+
+#footer {
+  margin: 120px auto 0 auto;
+  width: 375px;
+
+  background-color: black;
+  border: 0.1px solid black;
+}
+
+#footer > h1 {
+  margin-left: 32px;
+  margin-top: 20px;
+  color: white;
+}
+
+#footer > p {
+  margin: 0px 32px;
+  color: white;
+}
+
+#footer > .footer-icons {
+  display: flex;
+  margin: 38px 0px 48px 32px;
+  flex-direction: strat-flex;
+}
+
+.icon-below {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.icon-below:hover {
+  filter: invert(80%) sepia(6%) saturate(4757%) hue-rotate(323deg)
+    brightness(370%) contrast(85%);
+}
+
+@media only screen and (min-width: 750px) {
+  .margin-auto-grid {
+    margin: 0 auto;
+    width: 770px;
+  }
+
+  .grid-container {
+    margin-top: 180px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 400px 313px 396px;
+    grid-gap: 5px;
+    background-color: white;
+    grid-template-areas:
+      "f f f f f s s s s s s s"
+      "t t t t t t t m m m m m"
+      "t t t t t t t k k k k k";
+  }
+
+  .grid-container > div:nth-child(1) {
+    grid-area: s;
+  }
+
+  .grid-container > div:nth-child(2) {
+    grid-area: f;
+  }
+
+  .grid-container > div:nth-child(3) {
+    grid-area: t;
+  }
+
+  .grid-container > div:nth-child(4) {
+    grid-area: m;
+  }
+
+  .grid-container > div:nth-child(5) {
+    grid-area: k;
+  }
+
+  .grid-container > div > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .grid-container > .first-text-grid > h1 {
+    margin-top: 25px;
+    margin-bottom: 21px;
+    line-height: 45px;
+    font-size: 50px;
+    width: 223px;
+  }
+
+  .grid-container > .first-text-grid > p {
+    color: #444444;
+
+    margin-bottom: 32px;
+    line-height: 28px;
+    font-size: 18px;
+    width: 223px;
+  }
+
+  .second-text-grid {
+    background-color: black;
+  }
+
+  .grid-container > .second-text-grid > h1 {
+    margin: 85px 29px 24px 29px;
+    line-height: 45px;
+    font-size: 50px;
+    color: white;
+    width: 223px;
+  }
+
+  .grid-container > .second-text-grid > p {
+    margin: 0 29px 85px 29px;
+    line-height: 18px;
+    font-size: 28px;
+    color: white;
+    width: 223px;
+  }
+
+  /* footer changes*/
+  #footer {
+    margin: 120px 0 0 0;
+    width: 100%;
+    height: 216px;
+    background-color: black;
+    border: 0.1px solid black;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #footer > h1 {
+    margin-left: 32px;
+    margin-top: 56px;
+    color: white;
+    width: 110px;
+    font-size: 18px;
+  }
+
+  #footer > p {
+    margin: 56px 133px 56px 65px;
+    color: white;
+    width: 280px;
+  }
+
+  #footer > .footer-icons {
+    display: flex;
+    margin: 56px 40px 140px 32px;
+    flex-direction: strat-flex;
+    width: 100px;
+    height: 20px;
+  }
+
+  /* header changes*/
+
+  #header-image {
+    display: none;
+    margin: 0;
+  }
+
+  #header-image-tablet {
+    display: inline;
+    margin: 0 0 120px 0;
+  }
+
+  header {
+    position: absolute;
+    top: 145px;
+    right: 40px;
+    left: auto;
+    width: 339px;
+    text-align: start;
+  }
+
+  header > h1 {
+    margin-bottom: 48px;
+    font-size: 70px;
+    line-height: 65px;
+    width: 338px;
+  }
+
+  header > p {
+    margin-bottom: 48px;
+    font-size: 18px;
+    line-height: 28px;
+    width: 338px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #header-image-tablet {
+    display: none;
+  }
+
+  #header-div-desktop-parent {
+    max-width: 990px;
+    height: 800px;
+    margin-left: 0px;
+    margin-right: auto;
+    position: relative;
+    background-color: black;
+  }
+
+  #header-div-desktop-child {
+    display: block;
+    background-image: url("image-hero-desktop.jpg"); /* The image used */
+    background-position: right 0px top 0px; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    width: 100%;
+    height: 100%;
+  }
+
+  #header-image-desktop {
+    display: block;
+    position: absolute;
+    top: 189px;
+    left: 160px;
+    background-color: blue;
+    width: 590px;
+    height: 100%;
+    font-size: 70px;
+    text-align: start;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(89deg, white 50%, black 50%);
+  }
+
+  header {
+    position: absolute;
+    top: 192px;
+    right: 162px;
+    left: auto
+    width: 350px;
+  }
+
+  header > h1 {
+    display: none;
+  }
+
+  header > p {
+    margin-bottom: 48px;
+    font-size: 18px;
+    line-height: 28px;
+    width: 338px;
+  }
+}
+
+/*
+background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
+*/
